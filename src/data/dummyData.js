@@ -121,7 +121,7 @@ export const team = [
   },
   {
     id: 3,
-    name: "Maynak Kumar",
+    name: "Mayank Kumar",
     role: "Researcher",
     bio: "Focused on accessibility research and educational technology",
     avatar: "🔬"

@@ -47,14 +47,11 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <Button size="lg" className="group">
+              <Button size="lg" className="group" onClick={() => window.location.href = '/login'}>
                 Try SignBridge
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="secondary" size="lg" className="group">
-                <Play className="mr-2 h-5 w-5" />
-                See How It Works
-              </Button>
+              {/* Removed secondary CTA */}
             </motion.div>
 
             <motion.div

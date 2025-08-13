@@ -18,7 +18,7 @@ const Features = () => {
             Powerful <span className="text-gradient">Features</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Two powerful components working together to make classrooms accessible for deaf students.
+            Powerful components working together to make classrooms accessible for deaf students.
           </p>
         </motion.div>
 
@@ -96,7 +96,7 @@ const Features = () => {
               Join thousands of students and educators who are already experiencing the power of accessible education.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-primary">
+              <button className="btn-primary" onClick={() => window.location.href = '/login'}>
                 Start Your Free Trial
               </button>
             </div>
@@ -111,36 +111,32 @@ const Features = () => {
           viewport={{ once: true }}
           className="mt-16"
         >
-          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
+          <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100">
+            <div className="grid lg:grid-cols-2 gap-10 items-center">
               <div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                <h3 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-5 leading-tight">
                   Why <span className="text-gradient">SignBridge</span> Works
                 </h3>
-                <p className="text-lg text-gray-600 mb-6">
+                <p className="text-lg text-gray-600 mb-8">
                   Our innovative approach removes the need for live sign interpreters while supporting both lectures and learning materials through simple, scalable technology.
                 </p>
-                <ul className="space-y-3">
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                    Real-time sign language translation
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                    Works directly in the browser
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                    Scales easily in classrooms
-                  </li>
-                  <li className="flex items-center text-gray-700">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                    No live interpreters needed
-                  </li>
+                <ul className="space-y-4">
+                  {[
+                    'Real-time sign language translation',
+                    'Works directly in the browser',
+                    'Scales easily in classrooms',
+                    'No live interpreters needed',
+                  ].map((point, i) => (
+                    <li key={i} className="flex items-start text-gray-700">
+                      <span className="mt-1 mr-3 inline-flex h-2.5 w-2.5 rounded-full bg-green-500 shadow-[0_0_0_4px_rgba(16,185,129,0.15)]"></span>
+                      <span className="text-base md:text-lg">{point}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
-              <div className="flex justify-center items-center">
-                <div className="w-96 h-96">
+              <div className="relative flex justify-center items-center">
+                <div className="absolute -inset-6 bg-gradient-to-tr from-primary-100 to-secondary-100 opacity-60 blur-2xl rounded-3xl" aria-hidden></div>
+                <div className="relative w-[420px] h-[420px] max-w-full">
                   <DotLottieReact
                     src="/3d-avatar-animation.lottie"
                     loop
